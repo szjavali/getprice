@@ -45,28 +45,7 @@ with open(os.path.join(path, 'userCookie.txt'), 'r') as f:
     cookies_str = json.loads(f.read())
 
 '''if len(sys.argv) >= 2:
-    linkid = sys.argv[1]
-    log_path = os.path.join(path, 'log', "linkid")
-    if not os.path.exists(log_path):
-        os.makedirs(log_path)
-        
-    logger = Log('item', log_path, '%(asctime)s - %(message)s')
-    detailspider = ItemDetail_selenium(logger, cookies_str, headless)
-    detailspider.getBrowser()
-    detailspider.login()
-    try:
-        data = detailspider.fetch(linkid, None)
-        if os.name == 'posix':
-            os.system('clear')
-        elif os.name == 'nt':
-            os.system('cls')
-        for i in data:
-            i['time'] = str(int(time.mktime(time.strptime(i['time'], "%Y-%m-%d %H:%M:%S"))))
-            #print(i['price'])
-        print("爬取指定商品：" + str(data))
-        detailspider.close()
-    except Exception as e:
-        print(repr(e))
+删除此段
 
 else:'''
 Step=1
